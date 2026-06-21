@@ -1,0 +1,6 @@
+flask
+torch
+transformers
+sentencepiece
+accelerate
+safetensors

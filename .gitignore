@@ -1,0 +1,18 @@
+# Virtual environment
+.venv/
+
+# Model weights (too large for GitHub)
+model/
+web_app/pegasus_mixed_finetuned/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: "Segoe UI", sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b,
+            #312e81
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.upload-section {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    flex: 1;
+
+    background: rgba(255,255,255,0.1);
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+textarea {
+    width: 100%;
+    min-height: 320px;
+
+    resize: vertical;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    transition: all 0.3s ease;
+}
+
+textarea::placeholder {
+    color: #cbd5e1;
+}
+
+textarea:focus {
+    outline: none;
+
+    border-color: #60a5fa;
+
+    box-shadow:
+        0 0 20px rgba(96,165,250,0.35);
+}
+
+#wordCount {
+    margin-top: 10px;
+    color: #cbd5e1;
+}
+
+button {
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.upload-section button,
+.generate-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #3b82f6,
+            #6366f1
+        );
+
+    color: white;
+
+    padding: 13px 22px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.upload-section button:hover,
+.generate-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(59,130,246,0.4);
+}
+
+.generate-btn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.output-card {
+    margin-top: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    padding: 25px;
+}
+
+.output-card h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.summary-box {
+    min-height: 180px;
+
+    background: rgba(0,0,0,0.15);
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    color: #f8fafc;
+
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+}
+
+.summary-box:empty::before {
+    content: "Summary will appear here...";
+    color: #94a3b8;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Meeting Summarizer</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>Meeting Summarizer</h1>
+
+        <p class="subtitle">
+          Paste a meeting transcript and generate a summary.
+        </p>
+
+        <div class="upload-section">
+          <input type="file" id="fileInput" accept=".txt" />
+          <button onclick="loadFile()">Load File</button>
+        </div>
+
+        <textarea
+          id="transcript"
+          placeholder="Paste transcript here..."
+        ></textarea>
+
+        <p id="wordCount">Words: 0</p>
+
+        <button class="generate-btn" onclick="summarizeText()">
+          Generate Summary
+        </button>
+
+        <div class="output-card">
+          <h2>Summary</h2>
+
+          <div id="result" class="summary-box">Waiting for input...</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
